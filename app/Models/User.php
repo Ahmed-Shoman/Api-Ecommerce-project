@@ -55,4 +55,15 @@ public function getJWTCustomClaims()
     return [];
 }
 
+
+public function locations()
+{
+    return $this->hasMany(Location::class);
+}
+
+public function orders()
+{
+    return $this->hasMany(Order::class);
+}
+
 }

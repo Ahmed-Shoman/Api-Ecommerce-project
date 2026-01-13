@@ -19,7 +19,7 @@ class Location extends Model
 
 
     public function user() {
-        return $this->belongTo(User::class , 'user_id');
+        return $this->belongsTo(User::class , 'user_id');
 
     }
 }
