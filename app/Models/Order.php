@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Http\Controllers\OrderItems;
 use App\Models\Location;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -27,6 +28,14 @@ class Order extends Model
     public function location()
     {
         return $this->belongsTo(Location::class);
+    }
+
+    public function orderItems(){
+        return $this->hasMany(OrderItems::class);
+    }
+
+    public function products(){
+        return $this->belongsToMany(product::class);
     }
 
 }

@@ -29,4 +29,12 @@ class Product extends Model
     {
         return $this->belongsTo(category::class,'brand_id');
     }
+    public function orderItems()
+    {
+        return $this->belongsTo(OrderItems::class);
+    }
+
+    public function orders(){
+        return $this->belongsToMany(Order::class);
+    }
 }

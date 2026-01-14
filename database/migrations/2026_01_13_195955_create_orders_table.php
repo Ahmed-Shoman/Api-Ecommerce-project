@@ -24,7 +24,7 @@ return new class extends Migration
 
             $table->double('total_price', 12, 2);
 
-            $table->string('delivery_date');
+            $table->string('delivery_of_delivery');
 
             $table->timestamps();
         });

@@ -4,10 +4,12 @@ use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\BrandsController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -61,3 +63,9 @@ Route::get('products/{id}', [ProductController::class, 'show']);
 Route::post('products', [ProductController::class, 'store']);
 Route::put('update_products/{id}', [ProductController::class, 'update_product']);
 Route::delete('delete_products/{id}', [ProductController::class, 'product_delete']);
+#----------------------------------order module---------------------------------#
+Route::get('order', [OrderController::class, 'index']);
+Route::get('order/{id}', [OrderController::class, 'show']);
+Route::post('order', [OrderController::class, 'store']);
+Route::put('update_order/{id}', [OrderController::class, 'update_order']);
+Route::delete('delete_order/{id}', [OrderController::class, 'order_delete']);
